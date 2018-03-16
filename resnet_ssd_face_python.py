@@ -3,11 +3,8 @@ import argparse
 import os
 import sys
 
-try:
-    import cv2 as cv
-except ImportError:
-    raise ImportError('Can\'t find OpenCV Python module. If you\'ve built it from sources without installation, '
-                      'configure environment variable PYTHONPATH to "opencv_build_dir/lib" directory (with "python3" subdirectory if required)')
+import cv2 as cv
+
 from cv2 import dnn
 
 path = os.path.abspath(os.path.join(os.path.dirname(__file__), '.'))
